@@ -19,7 +19,7 @@ const deleteOne = async({ Pessoa }, req, res) => {
     res.redirect('/pessoas')
 }
 const editForm = async({ Pessoa }, req, res) => {
-    const pessoa = await Pessoa.findById(req.params.id)
+    const pessoa = await Pessoa.findByPk(req.params.id)
     res.render('pessoas/edit', { pessoa })
 }
 const editProcess = async({ Pessoa }, req, res) => {
